@@ -1,0 +1,14 @@
+type Query {
+    findAll(titleFilter: String): [Show]
+    addShow(title: String, releaseYer: Int): MutationResponse
+}
+
+type Show {
+    title: String
+    releaseYear: Int
+}
+
+type MutationResponse {
+    success: Boolean
+    message: String
+}
